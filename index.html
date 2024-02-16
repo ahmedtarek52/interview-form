@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/all.min.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Document</title>
+  <style>
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+
+<body >
+  <div class="container my-5 bg-light rounded-4 w-75">
+    <form class="p-3 m-5" id="myForm">
+
+      <div id="page1">
+        <legend class="text-center fw-bold">Egy Climatech Startups (ECTS)</legend>
+        <div class="mb-3">
+          <label for="disabledTextInput" class="form-label">Name of the Organization:*</label>
+          <select id="disabledSelect" class="form-select" required>
+            <option value="">Startup: a small new business. </option>
+            <option>Company: a boarder established organization.</option>
+            <option>Project: a temporary endeavor within a defined timeframe and budget. </option>
+            <option>others</option>
+          </select>
+        </div>
+        <div class="mb-3">
+          <p class="p-0 m-0">Stage of Operation :(Multiple choice) </p>
+          <input type="checkbox" id="Agriculture" name="name" value="Agriculture">
+          <label for="Agriculture">Agriculture and Agribusiness Industry </label><br>
+
+          <input type="checkbox" id="Sustainable" name="name" value="Sustainable">
+          <label for="Sustainable">Sustainable Manufacturing Activities</label><br>
+
+          <input type="checkbox" id="Eco-construction" name="name" value="Eco-construction">
+          <label for="Eco-construction">Eco-construction and Energy Efficient Buildings</label><br>
+        </div>
+
+
+        <div class="mb-3">
+          <label for="disabledSelect" class="form-label">Year of Establishment:*</label>
+          <input type="number" id="disabledTextInput" class="form-control"  placeholder="Disabled input" required>
+        </div>
+
+        <span id="page1ErrorMessage" class="error-message hidden bg-danger-subtle  fs-5 p-1">Please fill in all the
+          required fields.</span><br><br>
+        <button type="button" onclick="nextPage(1, 2)" class="btn btn-primary">Next</button>
+      </div>
+
+      <div id="page2" class="hidden">
+        <h2>Page 2</h2>
+        <div class="mb-3">
+          <label for="disabledTextInput2" class="form-label">Target customers or clients?*  </label>
+          <input type="text" id="disabledTextInput2" class="form-control" placeholder="Disabled input" required>
+        </div>
+
+        <div class="mb-3">
+          <label for="disabledTextInput3" class="form-label">Who are your main competitors? (option)</label>
+          <input type="text" id="disabledTextInput3" class="form-control" placeholder="Disabled input" >
+        </div>
+
+        <div class="mb-3">
+          <label for="disabledTextInput4" class="form-label">Have you encountered any specific legal </label>
+          <select name="encountered" id="encountered" class="form-select" required>
+            <option value="">yes</option>
+            <option value="">no</option>
+          </select>
+        </div>
+        <span id="page2ErrorMessage" class="error-message hidden bg-danger-subtle  fs-5 ">Please fill in all the
+          required fields.</span><br><br>
+
+        <button type="button" onclick="prevPage(2, 1)" class="btn btn-primary">Back</button>
+        <button type="button" onclick="nextPage(2, 3)" class="btn btn-primary">Next</button>
+      </div>
+
+
+      <div id="page3" class="hidden">
+        <h2>Page 3</h2>
+        <div class="mb-3">
+          <label for="disabledTextInput5" class="form-label">Disabled input</label>
+          <input type="text" id="disabledTextInput5" class="form-control" placeholder="Disabled input" required>
+        </div>
+
+        <div class="mb-3">
+          <label for="disabledTextInput6" class="form-label">Disabled input</label>
+          <input type="text" id="disabledTextInput6" class="form-control" placeholder="Disabled input" required>
+        </div>
+
+        <div class="mb-3">
+          <label for="disabledTextInput7" class="form-label">Disabled input</label>
+          <input type="text" id="disabledTextInput7" class="form-control" placeholder="Disabled input" required>
+        </div>
+        <span id="page3ErrorMessage" class="error-message hidden bg-danger-subtle  fs-5 ">Please fill in all the
+          required fields.</span><br><br>
+
+        <button type="button" onclick="prevPage(3, 2)" class="btn btn-primary">Back</button>
+        <button type="button" onclick="submitForm()" class="btn btn-primary">Submit</button>
+      </div>
+
+    </form>
+  </div>
+
+  <body>
+
+    <script src="js/main.js"></script>
+  </body>
+
+</html>
